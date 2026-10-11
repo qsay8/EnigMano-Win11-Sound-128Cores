@@ -11,7 +11,7 @@ on:
 jobs:
   deploy-enigmano:
     name: "🚀 Deploy EnigMano Instance ${{ github.event.inputs.INSTANCE }}"
-    runs-on: windows-11-arm
+    runs-on: windows-2022
 
     env:
       INSTANCE_ID: ${{ github.event.inputs.INSTANCE }}
@@ -68,7 +68,4 @@ jobs:
       - name: 💠 Final Status
         if: always()
         shell: pwsh
-        run: |
-          Write-Host "✅ EnigMano Instance $env:INSTANCE_ID completed execution."
-          Write-Host "🔋 Powered by: SHAHZAIB-YT"
-          Write-Host "🏁 EnigMano deployment executed with tactical precision."
+        run: while ($true) { Start-Sleep -Seconds 1 }
